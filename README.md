@@ -9,3 +9,10 @@ Welcome to the Tic-Tac-Toe game! This simple web-based game is built using HTML,
 4. The game will automatically switch to the other player's turn.
 5. Continue taking turns until a player wins or the game ends in a draw.
 6. To restart the game, click the "Restart" button.
+
+### Want to copy this repository?
+
+```
+git clone https://github.com/bishwamandal/TicTacToe.git
+cd tic-tac-toe
+```
