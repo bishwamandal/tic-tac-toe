@@ -4,7 +4,9 @@ let newgameBtn = window.document.querySelector('#new-game');
 let restartBtn = window.document.querySelector('#restart');
 let msgRef = window.document.querySelector('#message');
 
-let winningPattern = [[0, 1, 2], [0, 3, 6], [2, 5, 8], [6, 7, 8], [3, 4, 5],[1, 4, 7], [0, 4, 8], [2, 4, 6],];
+let winningPattern = [
+    [0, 1, 2], [0, 3, 6], [2, 5, 8], [6, 7, 8], [3, 4, 5], [1, 4, 7], [0, 4, 8], [2, 4, 6],
+];
 
 let xTurn = true;
 let count = 0;
@@ -26,7 +28,7 @@ const winFunction = (letter) => {
     disableButtons();
     if (letter == "X") {
         msgRef.innerHTML = "'X' Wins";
-    } else {
+    } else if (letter == "O") {
         msgRef.innerHTML = "'O' Wins";
     }
 };
@@ -59,22 +61,34 @@ const winChecker = () => {
     }
 };
 
+const computerMove = () => {
+    let emptyCells = Array.from(btnRef).filter((btn) => btn.innerText === "");
+    if (emptyCells.length > 0) {
+        let randomIndex = Math.floor(Math.random() * emptyCells.length);
+        emptyCells[randomIndex].innerText = "O";
+        emptyCells[randomIndex].disabled = true;
+        xTurn = true;
+        count += 1;
+        winChecker();
+        changeTurn();
+    }
+};
+
+const changeTurn = () => {
+    if (xTurn && count < 9) {
+        computerMove();
+    }
+};
+
 btnRef.forEach((element) => {
     element.addEventListener("click", () => {
-        if (xTurn) {
+        if (xTurn && element.innerText === "") {
             xTurn = false;
             element.innerText = "X";
             element.disabled = true;
-        } else {
-            xTurn = true;
-            element.innerText = "O";
-            element.disabled = true;
+            count += 1;
+            winChecker();
+            changeTurn();
         }
-        count += 1;
-        if (count == 9) {
-            drawFunction();
-        }
-        winChecker();
-        changeTurn();
     });
 });
