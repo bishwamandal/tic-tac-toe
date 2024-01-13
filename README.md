@@ -13,6 +13,6 @@ Welcome to the Tic-Tac-Toe game! This simple web-based game is built using HTML,
 ## Want to copy this repository?
 
 ```
-git clone https://github.com/bishwamandal/TicTacToe.git
+git clone https://github.com/bishwamandal/Tic-Tac-Toe.git
 cd tic-tac-toe
 ```
