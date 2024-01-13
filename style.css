@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    transition: 0.2s ease-in-out;
+    box-sizing: border-box;
+    font-family: 'Coiny', cursive;
+}
+
+body {
+    height: 100vh;
+    background-color: wheat;
+}
+
+html {
+    font-size: 18px;
+}
+
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.wrapper {
+    margin-top: 1.5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.toptitle {
+    font-size: 2.5em;
+    text-align: center;
+    color: #ee5a5a;
+}
+
+.container {
+    width: 72vmin;
+    height: 72vmin;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    gap: 3vmin;
+}
+
+.button-option {
+    background: #ecc040;
+    height: 21vmin;
+    width: 21vmin;
+    border: 4px solid #ee5a5a;
+    border-radius: 9px;
+    font-size: 12vmin;
+    color: #ee5a5a;
+}
+
+.button-option:hover{
+    background-color: rgb(236, 210, 64);
+    color: #ee645a;
+}
+
+#restart {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 18px;
+    background-color: #ee5a5a;
+    color: wheat;
+    position: relative;
+    margin: 1.5em auto 0 auto;
+    display: block;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#restart:hover {
+    background-color: #ecc040;
+    color: #ee5a5a;
+    border: 4px solid #ee5a5a;
+    border-radius: 18px;
+}
+
+.popup {
+    background: wheat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 12vmin;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+#new-game {
+    font-size: 0.5em;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.75em;
+    border: 4px solid #ee5a5a;
+    background-color: #ecc040;
+    color: #ee5a5a;
+}
+
+#new-game:hover {
+    background-color: #ee5a5a;
+    color: wheat;
+}
+
+#message {
+    font-size: 1em;
+    text-align: center;
+    color: #ee5a5a;
+}
+
+.popup.hide {
+    display: none;
+}
