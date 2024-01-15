@@ -31,7 +31,6 @@ toggleBtn.addEventListener("change", () => {
             element.style.boxShadow = '5px 5px 0 0 #ecc040';
         });
         document.documentElement.style.setProperty('--hover-border-color', '#ecc040');
-        document.documentElement.style.setProperty('--hover-box-shadow', '0 0 0 0 #ecc040');
     } else {
         changeTheme.style.color = '#ee5a5a';
         topTitle.style.color = '#ee5a5a';
@@ -41,7 +40,6 @@ toggleBtn.addEventListener("change", () => {
             element.style.boxShadow = '5px 5px 0 0 #ee5a5a';
         });
         document.documentElement.style.setProperty('--hover-border-color', '#ee5a5a');
-        document.documentElement.style.setProperty('--hover-box-shadow', '0 0 0 0 #ee5a5a');
     }
 });
 
