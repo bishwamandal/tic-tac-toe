@@ -23,7 +23,7 @@ html {
 }
 
 .wrapper {
-    margin-top: 1.5em;
+    margin-top: 0.5em;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -34,30 +34,55 @@ html {
     font-size: 2.5em;
     text-align: center;
     color: #ee5a5a;
+    margin-bottom: 0.5em;
 }
 
 .container {
+    position: relative;
     width: 72vmin;
     height: 72vmin;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 24px;
     gap: 3vmin;
+    z-index: 2;
+}
+
+.back-container {
+    position: absolute;
+    top: 103px;
+    left: 7px;
+    width: 72vmin;
+    height: 72vmin;
+    z-index: 1;
+    gap: 3vmin;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .button-option {
     background: #ecc040;
     height: 21vmin;
     width: 21vmin;
-    border: 4px solid #ee5a5a;
+    border: none;
     border-radius: 9px;
     font-size: 12vmin;
     color: #ee5a5a;
 }
 
 .button-option:hover{
+    border: 4px solid #ee5a5a;
+    transition: all 0.1s ease-in-out;
     background-color: rgb(236, 210, 64);
     color: #ee645a;
+}
+
+.back-button {
+    background: #ee5a5a;
+    height: 21vmin;
+    width: 21vmin;
+    border: none;
+    border-radius: 9px;
+    font-size: 12vmin;
 }
 
 #restart {
@@ -77,7 +102,8 @@ html {
 #restart:hover {
     background-color: #ecc040;
     color: #ee5a5a;
-    border: 4px solid #ee5a5a;
+    box-shadow: inset 0 0 0 4px #ee5a5a; /* Add this line */
+    padding: 0.5em 1em;
     border-radius: 18px;
 }
 
