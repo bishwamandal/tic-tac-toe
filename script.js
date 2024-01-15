@@ -4,10 +4,46 @@ let newgameBtn = window.document.querySelector('#new-game');
 let restartBtn = window.document.querySelector('#restart');
 let msgRef = window.document.querySelector('#message');
 
+let toggleBtn = document.getElementById("toggle-btn");
+let changeTheme = document.querySelector(".text-wrapper");
+let topTitle = document.querySelector(".toptitle");
+
 let winningPattern = [[0, 1, 2], [0, 3, 6], [2, 5, 8], [6, 7, 8], [3, 4, 5],[1, 4, 7], [0, 4, 8], [2, 4, 6],];
 
 let xTurn = true;
-let count = 0;
+let count = 0
+
+toggleBtn.addEventListener("change", () => {
+    if (toggleBtn.checked) {
+        document.body.style.backgroundColor = '#2b2b2b';
+    } else {
+        document.body.style.backgroundColor = 'wheat';
+    }
+});
+
+toggleBtn.addEventListener("change", () => {
+    if (toggleBtn.checked) {
+        changeTheme.style.color = '#ecc040';
+        topTitle.style.color = '#ecc040';
+        btnRef.forEach((element) => {
+            element.style.backgroundColor = '#ee5a5a';
+            element.style.color = 'wheat';
+            element.style.boxShadow = '5px 5px 0 0 #ecc040';
+        });
+        document.documentElement.style.setProperty('--hover-border-color', '#ecc040');
+        document.documentElement.style.setProperty('--hover-box-shadow', '0 0 0 0 #ecc040');
+    } else {
+        changeTheme.style.color = '#ee5a5a';
+        topTitle.style.color = '#ee5a5a';
+        btnRef.forEach((element) => {
+            element.style.backgroundColor = '#ecc040';
+            element.style.color = '#ee5a5a';
+            element.style.boxShadow = '5px 5px 0 0 #ee5a5a';
+        });
+        document.documentElement.style.setProperty('--hover-border-color', '#ee5a5a');
+        document.documentElement.style.setProperty('--hover-box-shadow', '0 0 0 0 #ee5a5a');
+    }
+});
 
 const disableButtons = () => {
     btnRef.forEach((element) => (element.disabled = true));

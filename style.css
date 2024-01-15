@@ -59,10 +59,15 @@ html {
     box-shadow: 5px 5px 0 0 #ee5a5a;
 }
 
-.button-option:hover{
-    border: 4px solid #ee5a5a;
+:root {
+    --hover-border-color: #ee5a5a;
+    --hover-box-shadow: none;
+}
+
+.button-option:hover {
+    border: 4px solid var(--hover-border-color);
     transition: all 0.1s ease-in-out;
-    box-shadow: none;
+    box-shadow: var(--hover-box-shadow);
     background-color: rgb(236, 210, 64);
     color: #ee645a;
 }
@@ -86,6 +91,69 @@ html {
     box-shadow: inset 0 0 0 4px #ee5a5a; /* Add this line */
     padding: 0.5em 1em;
     border-radius: 18px;
+}
+
+.theme-frame {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    position: absolute;
+    top: 256px;
+    left: 112px;
+    font-size: 36px;
+    color: #ee5a5a;
+}
+
+.frame .text-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Coiny-Regular", Helvetica;
+    font-weight: 400;
+    color: #ee5a5a;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch #slider {
+    position: relative;
+    display: block;
+    width: 78.5px;
+    height: 46.5px;
+    background: #ee5a5a;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.4s ease-in-out;
+}
+
+.switch #slider::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: #ecc040;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    transition: left 0.4s ease-in-out;
+}
+
+.switch input:checked + #slider {
+    background: #ecc040;
+}
+
+.switch input:checked + #slider::before {
+    left: 38px;
+    background: #ee5a5a;
 }
 
 .popup {
