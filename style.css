@@ -34,32 +34,19 @@ html {
     font-size: 2.5em;
     text-align: center;
     color: #ee5a5a;
-    margin-bottom: 0.75em;
+    margin-bottom: 0.5em;
 }
 
-.container, .back-container {
+.container {
     width: 48vmin;
     height: 48vmin;
     max-width: 500px;
     max-height: 500px;
-}
-
-.container {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 3vmin;
     z-index: 2;
-}
-
-.back-container {
-    position: absolute;
-    top: 115px;
-    left: 7px;
-    z-index: 1;
-    gap: 3vmin;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .button-option {
@@ -70,22 +57,15 @@ html {
     border-radius: 9px;
     font-size: 9vmin;
     color: #ee5a5a;
+    box-shadow: 5px 5px 0 0 #ee5a5a;
 }
 
 .button-option:hover{
     border: 4px solid #ee5a5a;
     transition: all 0.1s ease-in-out;
+    box-shadow: none;
     background-color: rgb(236, 210, 64);
     color: #ee645a;
-}
-
-.back-button {
-    background: #ee5a5a;
-    height: calc((100% / 3) - 2vmin); /* Adjusted from 21vmin */
-    width: calc((100% / 3) - 2vmin);
-    border: none;
-    border-radius: 9px;
-    font-size: 12vmin;
 }
 
 #restart {
