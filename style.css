@@ -23,7 +23,7 @@ html {
 }
 
 .wrapper {
-    margin-top: 2.5em;
+    margin-top: 1em;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -34,13 +34,18 @@ html {
     font-size: 2.5em;
     text-align: center;
     color: #ee5a5a;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
+}
+
+.container, .back-container {
+    width: 48vmin;
+    height: 48vmin;
+    max-width: 500px;
+    max-height: 500px;
 }
 
 .container {
     position: relative;
-    width: 72vmin;
-    height: 72vmin;
     display: flex;
     flex-wrap: wrap;
     gap: 3vmin;
@@ -49,10 +54,8 @@ html {
 
 .back-container {
     position: absolute;
-    top: 103px;
+    top: 115px;
     left: 7px;
-    width: 72vmin;
-    height: 72vmin;
     z-index: 1;
     gap: 3vmin;
     display: flex;
@@ -61,11 +64,11 @@ html {
 
 .button-option {
     background: #ecc040;
-    height: 21vmin;
-    width: 21vmin;
+    height: calc((100% / 3) - 2vmin); /* Adjusted from 21vmin */
+    width: calc((100% / 3) - 2vmin);
     border: none;
     border-radius: 9px;
-    font-size: 12vmin;
+    font-size: 9vmin;
     color: #ee5a5a;
 }
 
@@ -78,8 +81,8 @@ html {
 
 .back-button {
     background: #ee5a5a;
-    height: 21vmin;
-    width: 21vmin;
+    height: calc((100% / 3) - 2vmin); /* Adjusted from 21vmin */
+    width: calc((100% / 3) - 2vmin);
     border: none;
     border-radius: 9px;
     font-size: 12vmin;
@@ -87,14 +90,13 @@ html {
 
 #restart {
     font-size: 1.5em;
-    margin-top: 1.5em;
     padding: 0.5em 1em;
     border: none;
     border-radius: 18px;
     background-color: #ee5a5a;
     color: wheat;
     position: relative;
-    margin: 1.5em auto 1.5em auto;
+    margin: 2em auto 2em auto;
     display: block;
     transition: background-color 0.2s ease-in-out;
 }
