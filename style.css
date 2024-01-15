@@ -51,7 +51,7 @@ html {
 
 .button-option {
     background: #ecc040;
-    height: calc((100% / 3) - 2vmin); /* Adjusted from 21vmin */
+    height: calc((100% / 3) - 2vmin);
     width: calc((100% / 3) - 2vmin);
     border: none;
     border-radius: 9px;
