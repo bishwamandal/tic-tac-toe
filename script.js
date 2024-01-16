@@ -74,6 +74,7 @@ newgameBtn.addEventListener("click", () => {
     count = 0;
     enableButtons();
 });
+
 restartBtn.addEventListener("click", () => {
     count = 0;
     enableButtons();
