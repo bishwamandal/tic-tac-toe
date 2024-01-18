@@ -4,7 +4,7 @@ Welcome to the Tic-Tac-Toe game! This simple web-based game is built using HTML,
 
 ## Assets
 
-[Figma File](https://github.com/bishwamandal/Tic-Tac-Toe/blob/main/Assets/Design%20Assets.fig)
+[`Figma File`](https://github.com/bishwamandal/Tic-Tac-Toe/blob/main/Assets/Design%20Assets.fig)
 
 <img src="https://github.com/bishwamandal/Tic-Tac-Toe/blob/main/Assets/app-icon/App-Icon-1.svg" alt="App Icon" width="50" height="50">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/bishwamandal/Tic-Tac-Toe/blob/main/Assets/app-icon/App-Icon-2.svg" alt="App Icon" width="50" height="50">
 
