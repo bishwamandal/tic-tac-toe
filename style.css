@@ -84,10 +84,13 @@ html {
     transition: background-color 0.2s ease-in-out;
 }
 
+:root {
+    --restart-hover-box-shadow: #ecc040;
+}
+
 #restart:hover {
-    background-color: #ecc040;
-    color: #ee5a5a;
-    box-shadow: inset 0 0 0 4px #ee5a5a; /* Add this line */
+    color: wheat;
+    box-shadow: inset 0 0 0 4px var(--restart-hover-box-shadow); /* Add this line */
     padding: 0.5em 1em;
     border-radius: 18px;
 }

@@ -16,13 +16,6 @@ let count = 0
 toggleBtn.addEventListener("change", () => {
     if (toggleBtn.checked) {
         document.body.style.backgroundColor = '#2b2b2b';
-    } else {
-        document.body.style.backgroundColor = 'wheat';
-    }
-});
-
-toggleBtn.addEventListener("change", () => {
-    if (toggleBtn.checked) {
         changeTheme.style.color = '#ecc040';
         topTitle.style.color = '#ecc040';
         btnRef.forEach((element) => {
@@ -30,8 +23,12 @@ toggleBtn.addEventListener("change", () => {
             element.style.color = 'wheat';
             element.style.boxShadow = '5px 5px 0 0 #ecc040';
         });
+        restartBtn.style.backgroundColor = '#ecc040';
+        restartBtn.style.color = '#ee5a5a';
         document.documentElement.style.setProperty('--hover-border-color', '#ecc040');
+        document.documentElement.style.setProperty('--restart-hover-box-shadow', '#ee5a5a')
     } else {
+        document.body.style.backgroundColor = 'wheat';
         changeTheme.style.color = '#ee5a5a';
         topTitle.style.color = '#ee5a5a';
         btnRef.forEach((element) => {
@@ -39,7 +36,10 @@ toggleBtn.addEventListener("change", () => {
             element.style.color = '#ee5a5a';
             element.style.boxShadow = '5px 5px 0 0 #ee5a5a';
         });
+        restartBtn.style.backgroundColor = '#ee5a5a';
+        restartBtn.style.color = 'wheat';
         document.documentElement.style.setProperty('--hover-border-color', '#ee5a5a');
+        document.documentElement.style.setProperty('--restart-hover-box-shadow', '#ecc040')
     }
 });
 
