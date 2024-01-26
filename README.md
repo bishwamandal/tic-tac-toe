@@ -27,3 +27,7 @@ Welcome to the Tic-Tac-Toe game! This simple web-based game is built using HTML,
 git clone https://github.com/bishwamandal/Tic-Tac-Toe.git
 cd tic-tac-toe
 ```
+
+## Contributing
+
+Contributions are welcome to improve the quality and completeness of the learning resources in this repository. Please open an issue or submit a pull request if you have any suggestions or improvements to share.
